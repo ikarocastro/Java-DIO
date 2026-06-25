@@ -2,11 +2,11 @@ package ExerciciosClassEEncapsulamento.PetShop;
 // TEMOS NOSSAS REGRAS DE NÉGOCIO!
     public class PetMachine {
 
-        private boolean clean;
+        private boolean clean = true;
 
-        private int water;
+        private int water = 30;
 
-        private int shampoo;
+        private int shampoo = 10;
 
         private Pet pet;
 
@@ -74,7 +74,7 @@ package ExerciciosClassEEncapsulamento.PetShop;
             this.water -= 10;
             this.shampoo -= 2;
             this.clean = true;
-                System.out.println("A máquina está limpa!");
+                System.out.println("A máquina foi limpa!");
             }
 
         //final linha Class

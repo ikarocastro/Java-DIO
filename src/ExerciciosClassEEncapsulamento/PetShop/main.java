@@ -25,16 +25,57 @@ public class main {
             option = scanner.nextInt();
 
             switch (option){
+                case 1 -> petMachine.takeAShower();
+                case 2 -> setWater();
+                case 3 -> setShampoo();
+                case 4 -> verifyWater();
+                case 5 -> verifyShampoo();
+                case 6 -> checkIfHasPetInManchine();
                 case 7 -> setPetinPetManchine();
+                case 8 -> petMachine.removePet();
+                case 9 -> petMachine.wash();
+                case 0 -> System.exit(0);
+                default -> System.out.println("Opção Inválida");
             }
-        }while(option != 0); // Enquanto for diferente de 0 zero ele tem que ficar aqui dentro rodando nosso codigo!
+        }while(true);
 
     }
 
-    public static void setPetinPetManchine(){
-        System.out.println("informe o nome do Pet!");
-        var name =  scanner.nextLine();
-        var Pet = new Pet(name);
+    private static void setShampoo(){
+        System.out.println("Tentando colocar shampoo na maquina!");
+        petMachine.addShampoo();
     }
+
+    private static void setWater(){
+        System.out.println("Tentando colocar agua na maquina!");
+        petMachine.addWater();
+    }
+
+    private static void verifyWater() {
+        var amount = petMachine.getWater();
+        System.out.println("A maquina esta no momento com " + amount + "Litros(s) de Agua!");
+    }
+
+    private static void verifyShampoo() {
+        var amount = petMachine.getShampoo();
+        System.out.println("A maquina esta no momento com " + amount + "Litros(s) de shampoo!");
+    }
+
+    private static void checkIfHasPetInManchine() {
+       var hasPet =  petMachine.hasPet();
+        System.out.println(hasPet ? "Tem Pet na maquina" : "Nao tem pet na maquina" );
+    }
+
+    public static void setPetinPetManchine() {
+        var nome = "";
+        while (nome == null || nome.isEmpty()) {
+            System.out.println("informe o nome do Pet!");
+            var name = scanner.nextLine();
+        }
+        var Pet = new Pet(nome);
+        petMachine.setPet(Pet);
+        System.out.println("O pet" + Pet.getNome() + "Foi colocado na maquina");
+    }
+
 }
 // parei no minuto 35:56
