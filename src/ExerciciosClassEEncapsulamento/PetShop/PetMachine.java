@@ -66,7 +66,7 @@ package ExerciciosClassEEncapsulamento.PetShop;
 
             public void removePet(){
             this.clean = this.pet.isClean();
-                System.out.println("O pet" + this.pet.getNome() + "está limpo");
+                System.out.println("O pet " + this.pet.getNome() + " está limpo");
                 this.pet = null;
             }
 

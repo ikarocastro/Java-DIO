@@ -63,18 +63,18 @@ public class main {
 
     private static void checkIfHasPetInManchine() {
        var hasPet =  petMachine.hasPet();
-        System.out.println(hasPet ? "Tem Pet na maquina" : "Nao tem pet na maquina" );
+        System.out.println(hasPet ? "Tem Pet na maquina" : "Nao tem pet na maquina");
     }
 
     public static void setPetinPetManchine() {
         var nome = "";
         while (nome == null || nome.isEmpty()) {
             System.out.println("informe o nome do Pet!");
-            var name = scanner.nextLine();
+            nome = scanner.next();
         }
         var Pet = new Pet(nome);
         petMachine.setPet(Pet);
-        System.out.println("O pet" + Pet.getNome() + "Foi colocado na maquina");
+        System.out.println("O pet " + Pet.getNome() + " Foi colocado na maquina");
     }
 
 }
