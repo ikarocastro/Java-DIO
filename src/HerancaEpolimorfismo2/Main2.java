@@ -25,5 +25,5 @@ diferente do final, que não permite que a gente não coloque filhos pra ele, co
 para fazer isso usamos "permits" para colocar as classes a baixo da hierarquia como permitidas para a herança
 e para as classes com herança usamos o comando "non-sealed" serve para reabrir um hierarquia que foi declarada como "sealed"
 
-
+Manager e employee2 são os objetos!
 */
